@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg: #0d0f1a;
+    --surface: #141624;
+    --surface2: #1e2235;
+    --accent: #2f64af;
+    --accent-glow: rgba(119, 151, 199, 0.3);
+    --success: #22c55e;
+    --error: #ef4444;
+    --text: #e8eaf0;
+    --text-muted: #8b8fa8;
+    --border: rgba(255, 255, 255, 0.08);
+    --radius: 12px;
+}
+
+body {
+    font-family: "Inter", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.page {
+    width: 100%;
+    max-width: 560px;
+}
+
+/* ── Header ── */
+.page-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 36px;
+}
+
+.logo-img {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+.page-title {
+    font-size: 22px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #fff 40%, #7797c7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.page-sub {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+/* ── Card ── */
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    margin-bottom: 20px;
+}
+
+.card-title {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}
+
+/* ── Form ── */
+label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.input-wrap {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 15px;
+    pointer-events: none;
+}
+
+input[type="url"],
+input[type="text"] {
+    width: 100%;
+    background: var(--surface2);
+    border: 1.5px solid var(--border);
+    border-radius: 9px;
+    padding: 11px 14px 11px 40px;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+input[type="url"]:focus,
+input[type="text"]:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+input[type="url"]::placeholder {
+    color: var(--text-muted);
+}
+
+.hint {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 7px;
+}
+
+/* ── Presets ── */
+.presets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.preset-btn {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    color: var(--text-muted);
+    font-size: 12px;
+    font-family: inherit;
+    padding: 5px 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.preset-btn:hover {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+    box-shadow: 0 0 10px var(--accent-glow);
+}
+
+/* ── Window size ── */
+.size-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.size-row .input-wrap {
+    flex: 1;
+}
+
+.size-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="number"] {
+    width: 100%;
+    background: var(--surface2);
+    border: 1.5px solid var(--border);
+    border-radius: 9px;
+    padding: 10px 12px;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input[type="number"]:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+/* ── Save button ── */
+.save-btn {
+    width: 100%;
+    padding: 13px;
+    background: linear-gradient(135deg, var(--accent) 0%, #7797c7 100%);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 18px var(--accent-glow);
+    letter-spacing: 0.3px;
+}
+
+.save-btn:hover {
+    filter: brightness(1.12);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px var(--accent-glow);
+}
+
+.save-btn:active {
+    transform: translateY(0);
+}
+
+/* ── Toast ── */
+#toast {
+    position: fixed;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 12px 22px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+#toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+#toast.success {
+    border-color: var(--success);
+    color: var(--success);
+}
+#toast.error {
+    border-color: var(--error);
+    color: var(--error);
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>URL Launcher</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img class="logo-img" src="icons/icon128.png" alt="URL" />
+      <span class="logo-text">URL Launcher</span>
+    </div>
+    <button class="theme-toggle" id="theme-toggle" title="Toggle theme" aria-label="Toggle theme"></button>
+  </header>
+
+  <!-- Search -->
+  <div class="search-container">
+    <input type="text" id="search-input" placeholder="Search links..." autocomplete="off" autofocus>
+  </div>
+
+  <!-- Link list -->
+  <main id="link-list">
+    <!-- Populated by popup.js from links.json -->
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>
