@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>URL Launcher – Settings</title>
+    <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+    <div class="page">
+        <div class="page-header">
+            <img class="logo-img" src="icons/icon128.png" alt="URL" />
+            <div>
+                <div class="page-title">URL Launcher</div>
+                <div class="page-sub">Configure your extension preferences</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-title">Popup Window Size</div>
+            <label>Custom dimensions (in pixels)</label>
+            <div class="size-row">
+                <div class="input-wrap">
+                    <span class="size-label">Width</span>
+                    <input type="number" id="popup-width" value="350" min="300" max="800" />
+                </div>
+                <div class="input-wrap">
+                    <span class="size-label">Height</span>
+                    <input type="number" id="popup-height" value="400" min="300" max="800" />
+                </div>
+            </div>
+        </div>
+        <button class="save-btn" id="save-btn">Save Settings</button>
+        <button class="restore-btn" id="restore-btn">Restore Defaults</button>
+    </div>
+    <div id="toast">
+        <span id="toast-icon">✓</span>
+        <span id="toast-msg">Settings saved!</span>
+    </div>
+    <script src="options.js"></script>
+</body>
+</html>
